@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con header, footer y lista</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendar.css"> <!-- Estilos para el calendario -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Barcala.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index-inicio.html">Inicio</a></li>
+                <li><a href="index-apartamento.html">Apartamento</a></li>
+                <li><a href="index-ubicacion.html">Ubicación</a></li>
+                <li><a href="index-reserva.html">Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenido">
+        <div id="calendar"></div> <!-- Aquí se mostrará el calendario -->
+        <form id="reservation-form">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="date">Fecha de reserva:</label><br>
+            <input type="date" id="date" name="date"><br>
+            <input type="submit" value="Reservar">
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="logo-footer">
+            <img src="Barcala.png" alt="logo">
+        </div>
+        <div class="contacto">
+            <ul class="info">
+                <li>COMPAÑÍA 9</li>
+                <li>Calle Compañía, 9, 1º Derecha</li>
+                <li>31001, Pamplona (Navarra)</li>
+                <li><a href="mailto:correo@example.com">correo@example.com</a></li>
+                <li>WhatsApp & Teléfono</li>
+            </ul>
+        </div>
+        <div class="logo-footer">
+            <img src="Barcala.png" alt="logo">
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="calendario.js"></script>
+</body>
+</html>
