@@ -94,11 +94,32 @@ header {
     width: 100%;
     height: auto;
 }
-.publicidad {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
+.centrar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.boton-publicidad {
+  color: inherit;
+  text-decoration: none;
+  background-color: #666666ab; /* Color de fondo */
+  border-radius: 15px; /* Hace que el contenedor sea ovalado */
+  margin: 1rem;
+  transition: box-shadow 0.3s ease; /* Transición de la sombra */
+}
+
+.boton-publicidad:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Añade una sombra cuando el cursor esté encima */
+}
+
+.publicidad {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+
 .mejor-tarifa {
     font-size: large;
 }
@@ -124,26 +145,11 @@ h2 {
   
   .slider-container img.active {
     display: block;
+    border-radius: 10px;
   }
   
   .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
+    display: none;
   }
   /* Estilos Ubicacion */
   .ubicacion-estructura {
@@ -152,18 +158,19 @@ h2 {
 iframe {
     width: 100%; /* Make the iframe fill its container */
     max-width: 90%; /* Limit the maximum width of the map */
-    height: 38rem; /* Increase the height of the map */
+    height: 40vh; /* Increase the height of the map */
     margin-bottom: 4%;
     margin-top: 2%;
+}
+.imagen-apartamento {
+  box-shadow: none;
 }
 .location-info {
   padding: 20px;
   padding-top: 50px;
   background-color: hsl(0, 2%, 95%);
-
-  /* Introduce aquí tu código */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   
 }
@@ -185,7 +192,6 @@ article img {
   min-height: 200px;
   object-fit: contain;
   background-color: hsl(0, 2%, 95%);
-  border-radius: 16px 16px 0 0;
 }
 
 
@@ -195,8 +201,6 @@ article h2{
   color: black;
   text-align: center;
   min-height: 60px;
-
-  /* Para que la linea se coloque en su lugar */
   position: relative;
 }
 
@@ -206,7 +210,6 @@ article h2{
   line-height: 1.8;
   min-height: 200px;
 }
-
 /* Esto es la línea naraja */
 article h2::after {
   content: "";
@@ -326,8 +329,10 @@ footer {
   .nav-toggle:focus:not(:focus-visible) {
     outline: none;
   }
+  .publicidad {
+    font-size: 1.5rem;
+  }
 }
-
 
 
 @media (max-width: 767px) {

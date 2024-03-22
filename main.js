@@ -1,5 +1,6 @@
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slider-container img');
+const intervalTime = 3000; // Intervalo de tiempo en milisegundos (3 segundos)
 
 function showSlide(n) {
   slides[currentSlide].classList.remove('active');
@@ -7,13 +8,18 @@ function showSlide(n) {
   slides[currentSlide].classList.add('active');
 }
 
-function prevSlide() {
-  showSlide(currentSlide - 1);
-}
-
 function nextSlide() {
   showSlide(currentSlide + 1);
 }
+
+// Función para avanzar automáticamente al siguiente slide
+function autoSlide() {
+  nextSlide();
+}
+
+// Iniciar el intervalo para avanzar automáticamente
+setInterval(autoSlide, intervalTime);
+
 // BUTTON TOGGLE
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
