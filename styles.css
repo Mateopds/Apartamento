@@ -50,20 +50,17 @@ header {
   
   .nav-menu {
     display: flex;
-    margin-right: 40px;
     list-style: none;
   }
   
   .nav-menu-item {
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 80px;
+    font-size: 1rem;
     text-transform: uppercase;
     width: max-content;
   }
   
   .nav-menu-link {
-    padding: 8px 12px;
+    padding: 0.5rem 0.75rem;
     border-radius: 3px;
   }
   
@@ -288,8 +285,11 @@ footer {
 /* MOBILE */
 @media (max-width: 768px) {
 
-  .header {
-    height: 60px;
+  .logo {
+    position: relative;
+    width: 6rem; /* Ancho deseado del contenedor */
+    height: 6rem; /* Alto deseado del contenedor */
+    margin: auto;
   }
 
   .nav-menu {
@@ -316,7 +316,7 @@ footer {
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-menu_visible {
