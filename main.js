@@ -18,7 +18,8 @@ function nextSlide() {
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
 
-navToggle.addEventListener("click", () => {
+navToggle.addEventListener("touchstart", (event) => {
+  event.preventDefault(); // Evita el desplazamiento mientras se toca el botón
   navMenu.classList.toggle("nav-menu_visible");
 
   if (navMenu.classList.contains("nav-menu_visible")) {
@@ -27,5 +28,6 @@ navToggle.addEventListener("click", () => {
     navToggle.setAttribute("aria-label", "Abrir menú");
   }
 });
+
 
 
