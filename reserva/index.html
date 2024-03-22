@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con header, footer y lista</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="calendar.js"> <!-- Estilos para el calendario -->
 </head>
 <body>
@@ -12,14 +13,28 @@
         <div class="logo">
             <img src="/img/Barcala.png" alt="Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/apartamento/index.html">Apartamento</a></li>
-                <li><a href="/ubicacion/index.html">Ubicación</a></li>
-                <li><a href="/reserva/index.html">Reserva</a></li>
+        <nav class="nav">
+            <button class="nav-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="index.html" class="nav-menu-link nav-link">Inicio</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="./apartamento/index.html" class="nav-menu-link nav-link">Apartamento</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="./ubicacion/index.html" class="nav-menu-link nav-link">Ubicación</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="./reserva/index.html" class="nav-menu-link nav-link">Reserva</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="tel:+123456789" class="nav-menu-link nav-link nav-menu-link_active">Contacto</a>
+                </li>
             </ul>
-        </nav>
+        </nav> 
     </header>
 
     <div class="contenido">

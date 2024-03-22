@@ -14,8 +14,18 @@ function prevSlide() {
 function nextSlide() {
   showSlide(currentSlide + 1);
 }
+// BUTTON TOGGLE
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-function toggleMenu() {
-  var menu = document.querySelector('.menu');
-  menu.classList.toggle('open');
-}
+navToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("nav-menu_visible");
+
+  if (navMenu.classList.contains("nav-menu_visible")) {
+    navToggle.setAttribute("aria-label", "Cerrar menú");
+  } else {
+    navToggle.setAttribute("aria-label", "Abrir menú");
+  }
+});
+
+
